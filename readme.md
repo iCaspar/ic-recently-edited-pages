@@ -1,4 +1,4 @@
-#iCaspar Recently Edited Pages Widget
+# iCaspar Recently Edited Pages Widget
 
 A simple plugin to add a list of recently added pages to the dashboard,
 similar to the Recent activity widget for Posts.

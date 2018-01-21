@@ -1,0 +1,42 @@
+{
+  "name": "icaspar/icaspar-recently-edited-pages",
+  "description": "Recently Edited Pages Dashboard Widget Plugin for WordPress",
+  "type": "plugin",
+  "keywords": [
+    "wordpress",
+    "wp",
+    "plugin"
+  ],
+  "homepage": "https://caspar.green",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Caspar Green",
+      "email": "cg@caspar.green"
+    }
+  ],
+  "require": {
+    "php": ">=7.1"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "ICaspar\\RecentlyEditedPages\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "files": [
+    ]
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  },
+  "config": {
+    "vendor-dir": "vendor",
+    "bin-dir": "bin"
+  },
+  "minimum-stability": "dev"
+}

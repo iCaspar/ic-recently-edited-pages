@@ -25,14 +25,14 @@ class RecentlyEditedPages {
 	}
 
 	public function renderWidget(): void {
-		$recentlyEditedPagesList = new \WP_Query(
-			[
-				'post_type'      => 'page',
-				'order_by'       => 'modified',
-				'order'          => 'DESC',
-				'posts_per_page' => 5
-			]
-		);
+		$args = [
+			'post_type'      => 'page',
+			'orderby'       => 'modified',
+			'order'          => 'DESC',
+			'posts_per_page' => 5,
+		];
+
+		$recentlyEditedPagesList = new \WP_Query( $args );
 
 		if ( $recentlyEditedPagesList->have_posts() ) {
 			echo '<ul>';
@@ -43,7 +43,8 @@ class RecentlyEditedPages {
                     <span style="color:#72777c;display:inline-block;min-width:150px;margin-right:5px"><?php the_modified_date(); ?></span>&nbsp;
 					<?php edit_post_link( get_the_title() ); ?>
                 </li>
-			<?php }
+				<?php
+			}
 			echo '</ul>';
 		}
 
